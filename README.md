@@ -22,4 +22,4 @@ As URLs diretas serão:
 
 ## Antes de usar nas lojas
 
-Os Termos de Uso ainda contêm trechos marcados como `PENDENTE PARA PUBLICAÇÃO`. Preencha esses pontos e faça uma revisão jurídica dos dois documentos antes de usar as URLs em lojas de aplicativos.
+Faça uma revisão jurídica dos dois documentos antes de usar as URLs em lojas de aplicativos e revise os textos sempre que o serviço ou suas funcionalidades mudarem.
