@@ -1,12 +1,15 @@
-# Finance — documentos legais
+# Finance — site oficial e documentos legais
 
-Site estático público com a Política de Privacidade e os Termos de Uso do aplicativo Finance.
+Site estático público do aplicativo Finance, com apresentação dos recursos,
+demonstrações visuais, instruções de uso e documentos legais.
 
 ## Páginas
 
-- `index.html`: página inicial dos documentos legais.
+- `index.html`: página informativa do aplicativo.
 - `privacidade.html`: Política de Privacidade.
 - `termos.html`: Termos de Uso.
+- `exclusao-de-conta.html`: instruções e solicitação externa de exclusão da conta.
+- `assets/app-icon.png`: ícone oficial usado na identidade visual.
 
 ## Publicar com GitHub Pages
 
@@ -19,7 +22,9 @@ As URLs diretas serão:
 
 - `https://patrickvca.github.io/FinanceApp-legal/privacidade.html`
 - `https://patrickvca.github.io/FinanceApp-legal/termos.html`
+- `https://patrickvca.github.io/FinanceApp-legal/exclusao-de-conta.html`
 
 ## Antes de usar nas lojas
 
-Faça uma revisão jurídica dos dois documentos antes de usar as URLs em lojas de aplicativos e revise os textos sempre que o serviço ou suas funcionalidades mudarem.
+Faça uma revisão jurídica dos documentos antes de usar as URLs em lojas de
+aplicativos e revise os textos sempre que o serviço ou suas funcionalidades mudarem.
