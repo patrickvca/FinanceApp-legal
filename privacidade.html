@@ -49,6 +49,7 @@
             <li>carteiras, cartões, saldos, receitas, despesas, categorias e movimentações cadastradas pelo usuário;</li>
             <li>metas, investimentos, agendamentos, recorrências, parcelamentos, faturas, pagamentos e transferências registrados no aplicativo;</li>
             <li>preferências de idioma, tema e lembretes locais.</li>
+            <li>status da assinatura, produto adquirido, validade do acesso Pro e identificadores técnicos da transação fornecidos pela loja.</li>
           </ul>
         </section>
 
@@ -64,6 +65,7 @@
             <li>manter a sessão autenticada;</li>
             <li>salvar e sincronizar os registros financeiros inseridos pelo usuário;</li>
             <li>calcular saldos, relatórios, metas e faturas;</li>
+            <li>validar, restaurar e administrar o acesso aos recursos do plano Pro;</li>
             <li>programar lembretes locais quando autorizados;</li>
             <li>prevenir acesso indevido e diagnosticar falhas técnicas sem expor dados sensíveis.</li>
           </ul>
@@ -72,32 +74,39 @@
         <section>
           <h2>4. Armazenamento e prestadores</h2>
           <p>A autenticação e os dados sincronizados utilizam a infraestrutura do Supabase. O dispositivo mantém uma cópia local dos registros e preferências necessárias ao funcionamento. Em Android e iOS, a sessão de autenticação é armazenada pelo SecureStore do Expo.</p>
+          <p>Assinaturas são processadas pela Google Play ou Apple App Store e validadas pelo RevenueCat. O Finance envia ao RevenueCat o identificador técnico da conta e recebe dados de produto, compra, validade e elegibilidade. O Finance não recebe o número do cartão ou outros dados completos do meio de pagamento.</p>
           <p>Os sistemas operacionais e as lojas podem tratar dados técnicos conforme as políticas próprias deles. O Finance não vende dados pessoais.</p>
         </section>
 
         <section>
-          <h2>5. Notificações</h2>
+          <h2>5. Arquivos de importação e exportação</h2>
+          <p>Os arquivos PDF, XLS e CSV são processados no aparelho. Ao exportar, o usuário escolhe o aplicativo ou local de destino e passa a ser responsável pela proteção da cópia. O Finance não envia esses arquivos ao servidor apenas para executar a importação ou exportação.</p>
+        </section>
+
+        <section>
+          <h2>6. Notificações</h2>
           <p>Os lembretes de despesas e de faturas são programados localmente no aparelho, no horário escolhido pelo usuário. A permissão pode ser recusada ou revogada nas configurações do sistema.</p>
         </section>
 
         <section>
-          <h2>6. Segurança e sessão</h2>
+          <h2>7. Segurança e sessão</h2>
           <p>O acesso aos dados na nuvem é limitado ao identificador obtido da sessão autenticada. Tokens e senhas não são registrados em logs de produção. Nenhum método de armazenamento é absolutamente infalível, mas são aplicadas medidas técnicas adequadas ao funcionamento atual.</p>
         </section>
 
         <section>
-          <h2>7. Retenção e exclusão</h2>
+          <h2>8. Retenção e exclusão</h2>
           <p>Os dados permanecem enquanto a conta estiver ativa. A opção Configurações &gt; Excluir conta remove permanentemente a conta de autenticação, o snapshot financeiro associado, as sessões e os dados privados locais daquele usuário.</p>
+          <p>O cancelamento da assinatura não exclui a conta. Registros de compra podem ser conservados pelas lojas e pelo provedor de assinaturas quando necessário para obrigações legais, fiscais, prevenção a fraude, estornos e restauração de compras.</p>
           <p>Quem não tiver acesso ao aplicativo pode iniciar a solicitação pela página pública de <a href="exclusao-de-conta.html">Exclusão de conta</a>, usando o mesmo e-mail cadastrado para confirmar a titularidade.</p>
         </section>
 
         <section>
-          <h2>8. Direitos do titular</h2>
+          <h2>9. Direitos do titular</h2>
           <p>O usuário pode consultar, corrigir e excluir seus dados pelo aplicativo. Solicitações adicionais podem ser enviadas ao contato de privacidade informado abaixo.</p>
         </section>
 
         <section>
-          <h2>9. Atualizações e contato</h2>
+          <h2>10. Atualizações e contato</h2>
           <p>Esta política poderá ser atualizada para refletir mudanças reais no aplicativo. Para dúvidas, solicitações ou assuntos de privacidade, entre em contato pelo e-mail <a href="mailto:financeappvca@gmail.com">financeappvca@gmail.com</a>. A versão pública desta política está disponível em <a href="https://patrickvca.github.io/FinanceApp-legal/privacidade.html">https://patrickvca.github.io/FinanceApp-legal/privacidade.html</a>.</p>
         </section>
       </article>
@@ -106,7 +115,7 @@
     <footer>
       <span>Finance · Política de Privacidade</span>
       <div class="footer-links"><a href="termos.html">Termos de Uso</a><a href="exclusao-de-conta.html">Excluir conta</a></div>
-      <span>Atualizado em 17 de agosto de 2026</span>
+      <span>Atualizado em 21 de agosto de 2026</span>
     </footer>
   </body>
 </html>
