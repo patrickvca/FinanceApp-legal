@@ -522,17 +522,25 @@ a {
 }
 
 .feature-number {
-  display: inline-grid;
-  width: 42px;
-  height: 32px;
-  place-items: center;
+  display: inline-flex;
+  width: fit-content;
+  min-width: 42px;
+  max-width: 100%;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 11px;
+  box-sizing: border-box;
   margin-bottom: 34px;
   border-radius: 10px;
   color: var(--primary);
   background: var(--primary-soft);
   font-size: 11px;
   font-weight: 900;
+  line-height: 1.25;
   letter-spacing: 0.08em;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .feature-card h3,
@@ -1168,6 +1176,7 @@ a {
   .section-block { padding: 78px 0; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature-card-wide { grid-column: auto; }
+  .feature-number { white-space: normal; }
   .report-demo { grid-template-columns: 1fr; }
   .showcase-section,
   .security-section { width: min(100% - 24px, 1180px); border-radius: 28px; }
