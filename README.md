@@ -14,7 +14,7 @@ demonstrações visuais, instruções de uso e documentos legais.
 ## Download para Windows
 
 O botão de download usa o asset `Finance-Setup.exe` da release mais recente do
-repositório principal:
+repositório público do site:
 
 ```text
 https://github.com/patrickvca/FinanceApp-legal/releases/latest/download/Finance-Setup.exe
