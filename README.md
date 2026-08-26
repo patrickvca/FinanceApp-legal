@@ -17,7 +17,7 @@ O botão de download usa o asset `Finance-Setup.exe` da release mais recente do
 repositório principal:
 
 ```text
-https://github.com/patrickvca/FinanceApp/releases/latest/download/Finance-Setup.exe
+https://github.com/patrickvca/FinanceApp-legal/releases/latest/download/Finance-Setup.exe
 ```
 
 Para manter o link funcionando, publique cada nova versão como GitHub Release
