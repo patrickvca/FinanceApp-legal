@@ -11,6 +11,19 @@ demonstrações visuais, instruções de uso e documentos legais.
 - `exclusao-de-conta.html`: instruções e solicitação externa de exclusão da conta.
 - `assets/app-icon.png`: ícone oficial usado na identidade visual.
 
+## Download para Windows
+
+O botão de download usa o asset `Finance-Setup.exe` da release mais recente do
+repositório principal:
+
+```text
+https://github.com/patrickvca/FinanceApp/releases/latest/download/Finance-Setup.exe
+```
+
+Para manter o link funcionando, publique cada nova versão como GitHub Release
+e preserve exatamente esse nome de arquivo. O instalador não deve ser incluído
+diretamente neste repositório do GitHub Pages.
+
 ## Publicar com GitHub Pages
 
 1. Abra **Settings > Pages** neste repositório.
