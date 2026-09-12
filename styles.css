@@ -1074,10 +1074,16 @@ a {
   place-items: center;
   margin-bottom: 25px;
   border-radius: 17px;
-  color: white;
+  background: var(--primary-soft);
+}
+
+.windows-logo {
+  display: block;
+  width: 32px;
+  height: 32px;
   background: var(--primary);
-  font-size: 31px;
-  font-weight: 900;
+  -webkit-mask: url("assets/windows-logo.svg") center / contain no-repeat;
+  mask: url("assets/windows-logo.svg") center / contain no-repeat;
 }
 
 .download-card small {
