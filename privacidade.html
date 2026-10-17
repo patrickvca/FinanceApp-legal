@@ -45,8 +45,9 @@
           <p>O Finance trata somente os dados necessários para autenticação, sincronização e organização financeira pessoal.</p>
           <ul>
             <li>e-mail, identificador técnico da conta e informações de sessão;</li>
-            <li>nome, e-mail e imagem de perfil fornecidos pelo Google ou pela Apple quando o usuário escolher login social;</li>
+            <li>nome, e-mail e dados básicos de perfil fornecidos pelo Google quando o usuário escolher esse meio de acesso;</li>
             <li>nome informado no perfil;</li>
+            <li>datas de acesso ao aplicativo e fuso horário para acompanhar a sequência diária de contas cadastradas;</li>
             <li>carteiras, cartões, saldos, receitas, despesas, categorias e movimentações cadastradas pelo usuário;</li>
             <li>metas, investimentos, agendamentos, recorrências, parcelamentos, faturas, pagamentos e transferências registrados no aplicativo;</li>
             <li>preferências de idioma, tema e lembretes locais.</li>
@@ -76,7 +77,7 @@
 
         <section>
           <h2>4. Armazenamento e prestadores</h2>
-          <p>A autenticação e os dados sincronizados utilizam a infraestrutura do Supabase. No login com Google ou Apple, a senha permanece com o provedor escolhido e não é recebida pelo Finance. O dispositivo mantém uma cópia local dos registros e preferências necessárias ao funcionamento. Em Android e iOS, a sessão de autenticação é armazenada pelo SecureStore do Expo.</p>
+          <p>A autenticação e os dados sincronizados utilizam a infraestrutura do Supabase. No login com Google, a senha permanece com esse provedor e não é recebida pelo Finance. O dispositivo mantém uma cópia local dos registros e preferências necessárias ao funcionamento. Em Android e iOS, a sessão de autenticação é armazenada pelo SecureStore do Expo.</p>
           <p>No modo sem cadastro, os registros financeiros permanecem somente no dispositivo e não são enviados para a nuvem. O Supabase cria apenas um identificador técnico anônimo para permitir o funcionamento da sessão local. Para sincronizar, recuperar ou acessar os registros em outro aparelho, é necessário vincular uma conta.</p>
           <p>Assinaturas são processadas pela Google Play ou Apple App Store e validadas pelo RevenueCat. O Finance envia ao RevenueCat o identificador técnico da conta e recebe dados de produto, compra, validade e elegibilidade. O Finance não recebe o número do cartão ou outros dados completos do meio de pagamento.</p>
           <p>Os sistemas operacionais e as lojas podem tratar dados técnicos conforme as políticas próprias deles. O Finance não vende dados pessoais.</p>
