@@ -10,624 +10,520 @@
     <meta name="theme-color" content="#0b1220" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
-    <meta
-      property="og:title"
-      content="Finance — Sua vida financeira, mais clara"
-    />
+    <meta property="og:title" content="Finance — Sua vida financeira, mais clara" />
     <meta
       property="og:description"
       content="Organize sua vida financeira e registre por mensagem ou áudio com o Coordenador Finance, exclusivo do Pro."
     />
-    <meta
-      property="og:url"
-      content="https://soufinance.com.br/"
-    />
-    <meta
-      property="og:image"
-      content="https://patrickvca.github.io/FinanceApp-legal/assets/og.png"
-    />
+    <meta property="og:url" content="https://soufinance.com.br/" />
+    <meta property="og:image" content="https://patrickvca.github.io/FinanceApp-legal/assets/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Finance — Sua vida financeira, mais clara"
-    />
+    <meta name="twitter:title" content="Finance — Sua vida financeira, mais clara" />
     <meta
       name="twitter:description"
       content="Organize sua vida financeira e registre por mensagem ou áudio com o Coordenador Finance, exclusivo do Pro."
     />
-    <meta
-      name="twitter:image"
-      content="https://patrickvca.github.io/FinanceApp-legal/assets/og.png"
-    />
+    <meta name="twitter:image" content="https://patrickvca.github.io/FinanceApp-legal/assets/og.png" />
     <title>Finance — Sua vida financeira, mais clara</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="landing.css" />
+    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-    <header class="site-header marketing-header">
-      <a class="brand" href="index.html" aria-label="Finance — início">
-        <img class="brand-logo" src="assets/app-icon.png" alt="" />
-        <span>Finance</span>
-      </a>
-      <nav aria-label="Navegação principal">
-        <a href="#baixar">Baixar</a>
+
+    <!-- Ícones reutilizáveis -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" /><path d="M8 9.5h8M8 12.5h5" /></symbol>
+      <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5" /><path d="M3 10h18M7 15h4" /></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2" /></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="1" /></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16" /><path d="M8 16v-4M12 16V8M16 16v-6" /></symbol>
+      <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5" /></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z" /><path d="M8.8 12l2.2 2.2 4.2-4.4" /></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5" /><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" /></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13" /></symbol>
+      <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 12s3.5-6 9-6c1.6 0 3 .5 4.2 1.2M21 12s-3.5 6-9 6c-1.6 0-3-.5-4.2-1.2" /><path d="M4 20L20 4" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" /></symbol>
+      <symbol id="i-windows" viewBox="0 0 24 24"><path d="M3 5.5l7.5-1v7H3zM12 4.3L21 3v8.5h-9zM3 12.5h7.5v7L3 18.5zM12 12.5h9V21l-9-1.3z" /></symbol>
+    </svg>
+
+    <header class="nav" data-nav>
+      <div class="nav-inner">
+        <a class="brand" href="#topo" aria-label="Finance — início">
+          <img src="assets/app-icon.png" alt="" width="32" height="32" />
+          <span>Finance</span>
+        </a>
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#recursos">Recursos</a>
+          <a href="#coordenador">Coordenador Pro</a>
+          <a href="#planos">Planos</a>
+          <a href="#seguranca">Segurança</a>
+          <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <a class="btn btn-primary btn-sm nav-cta" href="#baixar">Baixar</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav id="menu-mobile" class="nav-mobile" aria-label="Navegação principal (celular)" hidden>
         <a href="#recursos">Recursos</a>
         <a href="#coordenador">Coordenador Pro</a>
         <a href="#planos">Planos</a>
-        <a href="#como-usar">Como usar</a>
         <a href="#seguranca">Segurança</a>
-        <a href="#documentos">Documentos</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#baixar" class="btn btn-primary">Baixar o Finance</a>
       </nav>
     </header>
 
-    <main id="conteudo" class="marketing-main">
-      <section class="product-hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <span class="status-pill"
-            ><span aria-hidden="true"></span> Organização financeira
-            pessoal</span
-          >
-          <h1 id="hero-title">
-            Sua vida financeira inteira, <em>mais clara.</em>
-          </h1>
-          <p>
-            Organize carteiras, cartões, despesas, metas e investimentos sem
-            conectar sua conta bancária. Você registra, o Finance ajuda a
-            entender.
+    <main id="conteudo">
+      <!-- HERO -->
+      <section id="topo" class="hero" aria-labelledby="hero-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container hero-copy">
+          <span class="pill"><i aria-hidden="true"></i> Organização financeira pessoal</span>
+          <h1 id="hero-title">Sua vida financeira inteira, <span class="grad">mais clara.</span></h1>
+          <p class="lead">
+            Organize carteiras, cartões, despesas, metas e investimentos sem conectar sua conta
+            bancária. Você registra, o Finance ajuda a entender.
           </p>
           <div class="hero-actions">
-            <a
-              class="button button-primary"
-              href="https://github.com/patrickvca/FinanceApp-legal/releases/download/v1.8.0-windows.26/Finance-Setup.exe"
-              >Baixar para Windows</a
-            >
-            <a class="button button-secondary" href="#recursos"
-              >Conhecer os recursos</a
-            >
+            <a class="btn btn-primary btn-lg" href="#baixar">Começar grátis</a>
+            <a class="btn btn-ghost btn-lg" href="#recursos">Conhecer os recursos</a>
           </div>
-          <ul class="trust-list" aria-label="Diferenciais de privacidade">
-            <li>Sem anúncios</li>
-            <li>Sem acesso ao banco</li>
-            <li>Dados sob seu controle</li>
+          <ul class="trust-row" aria-label="Diferenciais de privacidade">
+            <li><svg><use href="#i-check" /></svg>Sem anúncios</li>
+            <li><svg><use href="#i-check" /></svg>Sem acesso ao banco</li>
+            <li><svg><use href="#i-check" /></svg>Dados sob seu controle</li>
           </ul>
         </div>
 
-        <div
-          class="hero-visual"
-          aria-label="Demonstração ilustrativa do painel do Finance"
-        >
-          <div class="ambient-orb orb-one" aria-hidden="true"></div>
-          <div class="ambient-orb orb-two" aria-hidden="true"></div>
-          <article
-            class="phone-shell"
-            aria-label="Tela inicial do Finance com dados ilustrativos"
-          >
-            <div class="phone-bar" aria-hidden="true">
-              <span>9:41</span><span>● ● ▰</span>
+        <div class="hero-stage" aria-label="Demonstração ilustrativa do Finance com dados fictícios">
+          <!-- Cards flutuantes à esquerda -->
+          <div class="float float-left-1 reveal" aria-hidden="true">
+            <div class="tx">
+              <span class="tx-icon" style="--c: #f97316">M</span>
+              <span class="tx-body"><b>Mercado</b><small>Alimentação · Hoje</small></span>
+              <strong class="neg">− R$ 186,40</strong>
             </div>
-            <div class="app-topline">
-              <div><small>Olá, Patrick</small><strong>Visão geral</strong></div>
-              <span class="avatar">P</span>
+          </div>
+          <div class="float float-left-2 reveal" aria-hidden="true">
+            <div class="tx">
+              <span class="tx-icon" style="--c: #4ade80">S</span>
+              <span class="tx-body"><b>Salário</b><small>Receita · 05 Ago</small></span>
+              <strong class="pos">+ R$ 6.250,00</strong>
             </div>
-            <div class="balance-card">
+          </div>
+          <div class="float float-left-3 reveal" aria-hidden="true">
+            <div class="bubble-user">Gastei 42,90 no almoço, no cartão</div>
+            <div class="bubble-bot"><svg><use href="#i-check" /></svg> Despesa de R$ 42,90 registrada em Alimentação.</div>
+          </div>
+
+          <!-- Celular -->
+          <article class="phone reveal" aria-hidden="true">
+            <div class="phone-notch"></div>
+            <div class="phone-status"><span>9:41</span><span>● ● ▰</span></div>
+            <div class="app-top">
+              <div><small>Olá!</small><strong>Visão geral</strong></div>
+              <span class="avatar">F</span>
+            </div>
+            <div class="balance">
               <small>Saldo total</small>
               <strong>R$ 8.420,50</strong>
-              <div class="balance-row">
-                <span
-                  ><i class="income-dot"></i> Receitas<br /><b
-                    >R$ 6.250</b
-                  ></span
-                >
-                <span
-                  ><i class="expense-dot"></i> Despesas<br /><b
-                    >R$ 3.184</b
-                  ></span
-                >
+              <div class="balance-split">
+                <span><i class="dot pos-bg"></i>Receitas<b>R$ 6.250</b></span>
+                <span><i class="dot neg-bg"></i>Despesas<b>R$ 3.184</b></span>
               </div>
             </div>
-            <div class="app-section-title">
-              <strong>Resumo do mês</strong><span>Agosto</span>
+            <div class="app-row-title"><strong>Últimos registros</strong><span>Ver todos</span></div>
+            <div class="tx tx-plain">
+              <span class="tx-icon" style="--c: #4da3ff">C</span>
+              <span class="tx-body"><b>Conta de casa</b><small>Moradia · Ontem</small></span>
+              <strong class="neg">− R$ 240,00</strong>
             </div>
-            <div class="mini-chart" aria-hidden="true">
-              <span style="--bar: 38%"></span><span style="--bar: 55%"></span
-              ><span style="--bar: 46%"></span> <span style="--bar: 78%"></span
-              ><span style="--bar: 66%"></span><span style="--bar: 88%"></span>
-              <span class="active" style="--bar: 62%"></span>
+            <div class="tx tx-plain">
+              <span class="tx-icon" style="--c: #a78bfa">I</span>
+              <span class="tx-body"><b>Internet</b><small>Serviços · 12 Ago</small></span>
+              <strong class="neg">− R$ 99,90</strong>
             </div>
-            <div class="app-section-title">
-              <strong>Últimos registros</strong><span>Ver todos</span>
+            <div class="tx tx-plain">
+              <span class="tx-icon" style="--c: #fbbf24">R</span>
+              <span class="tx-body"><b>Reserva</b><small>Meta · 10 Ago</small></span>
+              <strong>R$ 300,00</strong>
             </div>
-            <div class="transaction-row">
-              <i class="transaction-icon market">M</i
-              ><span><b>Mercado</b><small>Alimentação · Hoje</small></span
-              ><strong>− R$ 186,40</strong>
-            </div>
-            <div class="transaction-row">
-              <i class="transaction-icon home">C</i
-              ><span><b>Conta de casa</b><small>Moradia · Ontem</small></span
-              ><strong>− R$ 240,00</strong>
-            </div>
-            <div class="app-nav" aria-hidden="true">
-              <b>⌂</b><span>▤</span><span>＋</span><span>◎</span><span>⚙</span>
-            </div>
+            <div class="phone-input"><span>Converse com o coordenador</span><i><svg><use href="#i-mic" /></svg></i></div>
           </article>
-        </div>
-      </section>
 
-      <section
-        id="baixar"
-        class="download-section"
-        aria-labelledby="download-title"
-      >
-        <div class="download-copy">
-          <span class="eyebrow">Finance no computador</span>
-          <h2 id="download-title">Seus dados também no Windows.</h2>
-          <p>
-            Instale o Finance no Windows, entre com a mesma conta do celular e
-            continue sua organização financeira em uma tela maior.
-          </p>
-          <ul
-            class="download-details"
-            aria-label="Requisitos do Finance para Windows"
-          >
-            <li>Windows 10 ou 11</li>
-            <li>Computadores de 64 bits</li>
-            <li>Sincronização pela mesma conta Finance</li>
-          </ul>
-        </div>
-        <aside
-          class="download-card"
-          aria-label="Download do Finance para Windows"
-        >
-          <span class="windows-mark" aria-hidden="true">
-            <span class="windows-logo"></span>
-          </span>
-          <div>
-            <small>APLICATIVO PARA WINDOWS</small>
-            <strong>Finance Desktop</strong>
-          <p>Versão 1.8.0 · Revisão 26 · Instalador para Windows de 64 bits.</p>
+          <!-- Card de gráfico à direita -->
+          <div class="float float-right-1 reveal" aria-hidden="true">
+            <div class="week">
+              <div class="week-head"><small>Gastos desta semana</small><span>›</span></div>
+              <div class="week-total"><strong>R$ 1.200,00</strong><em>−8% vs. anterior</em></div>
+              <div class="week-bars">
+                <i style="--h: 30%"></i><i style="--h: 72%"></i><i style="--h: 45%"></i><i style="--h: 88%" class="on"></i><i style="--h: 38%"></i><i style="--h: 20%"></i><i style="--h: 12%"></i>
+              </div>
+              <div class="week-days"><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span><span>D</span></div>
+            </div>
           </div>
-          <a
-            class="button button-primary download-button"
-            href="https://github.com/patrickvca/FinanceApp-legal/releases/download/v1.8.0-windows.26/Finance-Setup.exe"
-            >Baixar .exe</a
-          >
-          <p class="store-only-note">
-            O aplicativo para computador não processa pagamentos. Para assinar
-            ou alterar o Finance Pro, use o app instalado pela Google Play.
-            O acesso é liberado no computador ao entrar com a mesma conta.
-          </p>
-        </aside>
-      </section>
-
-      <section id="coordenador" class="section-block coordinator-section" aria-labelledby="coordinator-title">
-        <div class="coordinator-copy">
-          <span class="eyebrow">Coordenador Finance · Exclusivo Pro</span>
-          <h2 id="coordinator-title">Conte o que aconteceu.<br />O Finance organiza.</h2>
-          <p class="coordinator-lead">Uma mensagem ou um áudio para registrar o gasto do dia, uma receita ou cuidar dos seus cadastros — sem preencher tudo sozinho.</p>
-          <ol class="coordinator-steps">
-            <li><span>01</span><div><h3>Fale do seu jeito</h3><p>Informe valor, categoria e conta ou cartão. Se faltar informação, o coordenador pergunta antes de lançar.</p></div></li>
-            <li><span>02</span><div><h3>Registre e confira</h3><p>Pedidos claros são aplicados automaticamente. Depois, você pode revisar, editar ou desfazer o que foi feito.</p></div></li>
-            <li><span>03</span><div><h3>Cuide de mais que despesas</h3><p>Cadastre cartões, metas e investimentos pelo chat, com as perguntas necessárias para cada registro.</p></div></li>
-          </ol>
-          <p class="coordinator-access">Disponível para contas cadastradas com o Finance Pro. Visitantes e contas gratuitas não têm acesso ao chat.</p>
-          <a class="button button-primary" href="#planos">Ver o Finance Pro</a>
-          <p class="coordinator-privacy">Com sua autorização, mensagens, áudios e dados necessários do perfil são processados pela OpenAI. A IA pode cometer erros: confira os registros. O coordenador não movimenta dinheiro real nem recomenda investimentos. <a href="privacidade.html">Entenda a privacidade do chat.</a></p>
-        </div>
-        <figure class="coordinator-preview">
-          <img src="assets/coordenador-chat.png" alt="Coordenador Finance Pro registrando uma despesa de R$ 42,90 por mensagem, com opção de revisar a alteração e enviar áudio." width="390" height="844" loading="lazy" />
-          <figcaption>Tela do aplicativo com conta de demonstração e dados fictícios.</figcaption>
-        </figure>
-      </section>
-
-      <section
-        id="recursos"
-        class="section-block"
-        aria-labelledby="features-title"
-      >
-        <header class="section-heading">
-          <div>
-            <span class="eyebrow">Tudo em um só lugar</span>
-            <h2 id="features-title">Do gasto do dia à meta de longo prazo.</h2>
-          </div>
-          <p>
-            O Finance reúne o que normalmente fica espalhado em planilhas,
-            anotações e vários aplicativos — sem movimentar dinheiro real.
-          </p>
-        </header>
-
-        <div class="feature-grid">
-          <article class="feature-card feature-card-wide">
-            <span class="feature-number">01</span>
-            <h3>Carteiras e cartões sob controle</h3>
-            <p>
-              Veja saldos, limites, compras, fechamento e vencimento de faturas
-              em uma visão organizada.
-            </p>
-            <div class="wallet-demo" aria-label="Exemplo ilustrativo de saldos">
-              <div>
-                <span class="wallet-color blue"></span>
-                <p><b>Conta principal</b><small>Saldo disponível</small></p>
-                <strong>R$ 5.280,50</strong>
-              </div>
-              <div>
-                <span class="wallet-color violet"></span>
-                <p><b>Cartão mensal</b><small>Fatura atual</small></p>
-                <strong>R$ 1.346,80</strong>
-              </div>
-              <div>
-                <span class="wallet-color teal"></span>
-                <p><b>Reserva</b><small>Objetivo protegido</small></p>
-                <strong>R$ 3.140,00</strong>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>Receitas e despesas</h3>
-            <p>
-              Registre movimentações por categoria e acompanhe para onde seu
-              dinheiro está indo.
-            </p>
-            <div class="donut-demo" aria-hidden="true">
-              <span>63%<small>essenciais</small></span>
-            </div>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>Agendamentos</h3>
-            <p>
-              Organize contas recorrentes, parcelamentos e compromissos futuros
-              sem depender da memória.
-            </p>
-            <ul class="compact-list" aria-label="Exemplos de agendamentos">
-              <li>
-                <i class="check-mark">✓</i><span>Aluguel</span><b>dia 05</b>
-              </li>
-              <li>
-                <i class="check-mark">✓</i><span>Assinaturas</span><b>dia 12</b>
-              </li>
-              <li>
-                <i class="clock-mark">•</i><span>Fatura</span><b>dia 18</b>
-              </li>
-            </ul>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-number">04 · PRO</span>
-            <h3>Metas e investimentos no Pro</h3>
-            <p>
-              Acompanhe objetivos e valores investidos com progresso visual e
-              contexto.
-            </p>
-            <div class="goal-demo">
+          <div class="float float-right-2 reveal" aria-hidden="true">
+            <div class="goal-mini">
               <div><span>Reserva de emergência</span><b>68%</b></div>
-              <div class="goal-track"><i style="width: 68%"></i></div>
+              <div class="track"><i style="width: 68%"></i></div>
               <small>R$ 10.200 de R$ 15.000</small>
             </div>
-          </article>
-
-          <article class="feature-card feature-card-wide">
-            <span class="feature-number">05 · PRO</span>
-            <h3>Relatórios que fazem sentido</h3>
-            <p>
-              Compare períodos, visualize categorias e gere um PDF para guardar
-              ou compartilhar quando quiser.
-            </p>
-            <div
-              class="report-demo"
-              aria-label="Exemplo ilustrativo de relatório mensal"
-            >
-              <div class="report-bars" aria-hidden="true">
-                <i style="--h: 44%"></i><i style="--h: 63%"></i
-                ><i style="--h: 54%"></i><i style="--h: 84%"></i
-                ><i style="--h: 69%"></i><i style="--h: 76%"></i>
-              </div>
-              <div class="report-summary">
-                <small>Economia no mês</small><strong>R$ 1.284,70</strong
-                ><span>+12% comparado ao mês anterior</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="feature-card feature-card-wide">
-            <span class="feature-number">06 · PRO</span>
-            <h3>Importação e exportação sob seu controle</h3>
-            <p>
-              Escolha despesas, receitas ou todos os dados, filtre o período ou
-              use “desde o início” e trabalhe com PDF, XLS ou CSV.
-            </p>
-            <ul class="compact-list" aria-label="Opções da central de dados">
-              <li>
-                <i class="check-mark">✓</i><span>Filtro por tipo</span
-                ><b>3 opções</b>
-              </li>
-              <li>
-                <i class="check-mark">✓</i><span>Período personalizado</span
-                ><b>início e fim</b>
-              </li>
-              <li>
-                <i class="check-mark">✓</i><span>Formatos</span
-                ><b>PDF · XLS · CSV</b>
-              </li>
-            </ul>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section id="planos" class="section-block" aria-labelledby="plans-title">
-        <header class="section-heading">
-          <div>
+      <!-- NÚMEROS -->
+      <section class="stats" aria-label="Destaques do Finance">
+        <div class="container stats-grid">
+          <div><strong>R$ 0</strong><span>para começar a organizar</span></div>
+          <div><strong>0 anúncios</strong><span>e nenhum rastreamento</span></div>
+          <div><strong>14 dias</strong><span>de teste Pro para contas elegíveis</span></div>
+          <div><strong>PDF · XLS · CSV</strong><span>para exportar seus dados no Pro</span></div>
+        </div>
+      </section>
+
+      <!-- RECURSOS -->
+      <section id="recursos" class="section" aria-labelledby="features-title">
+        <div class="container">
+          <header class="section-head center reveal">
+            <span class="eyebrow">Tudo em um só lugar</span>
+            <h2 id="features-title">Do gasto do dia<br />à meta de longo prazo.</h2>
+            <p>O que normalmente fica espalhado em planilhas, anotações e vários aplicativos — sem movimentar dinheiro real.</p>
+          </header>
+
+          <div class="feature-grid">
+            <article class="fcard reveal">
+              <span class="ficon"><svg><use href="#i-card" /></svg></span>
+              <h3>Carteiras e cartões<br />sob controle</h3>
+              <p>Saldos, limites, compras, fechamento e vencimento de faturas em uma visão organizada.</p>
+            </article>
+            <article class="fcard reveal">
+              <span class="ficon"><svg><use href="#i-swap" /></svg></span>
+              <h3>Receitas, despesas<br />e transferências</h3>
+              <p>Registre por categoria e veja para onde seu dinheiro está indo, mês a mês.</p>
+            </article>
+            <article class="fcard reveal">
+              <span class="ficon"><svg><use href="#i-calendar" /></svg></span>
+              <h3>Agendamentos<br />sem depender da memória</h3>
+              <p>Contas recorrentes, parcelamentos e compromissos futuros no dia certo.</p>
+            </article>
+            <article class="fcard reveal">
+              <span class="ficon violet"><svg><use href="#i-target" /></svg></span>
+              <span class="tag">PRO</span>
+              <h3>Metas e<br />investimentos</h3>
+              <p>Acompanhe objetivos e valores investidos com progresso visual e contexto.</p>
+            </article>
+            <article class="fcard reveal">
+              <span class="ficon violet"><svg><use href="#i-chart" /></svg></span>
+              <span class="tag">PRO</span>
+              <h3>Relatórios que<br />fazem sentido</h3>
+              <p>Compare períodos, visualize categorias e gere um PDF para guardar ou compartilhar.</p>
+            </article>
+            <article class="fcard reveal">
+              <span class="ficon violet"><svg><use href="#i-arrow" /></svg></span>
+              <span class="tag">PRO</span>
+              <h3>Importação e<br />exportação</h3>
+              <p>Filtre por tipo e período e trabalhe com PDF, XLS ou CSV — “desde o início”, se quiser.</p>
+            </article>
+          </div>
+          <div class="center-cta reveal"><a class="btn btn-primary" href="#baixar">Começar grátis</a></div>
+        </div>
+      </section>
+
+      <!-- COORDENADOR -->
+      <section id="coordenador" class="section split" aria-labelledby="coordinator-title">
+        <div class="container split-grid">
+          <figure class="split-visual reveal">
+            <div class="visual-glow" aria-hidden="true"></div>
+            <div class="phone phone-img">
+              <img src="assets/coordenador-chat.png" alt="Coordenador Finance Pro registrando uma despesa de R$ 42,90 por mensagem, com opção de revisar a alteração e enviar áudio." width="390" height="844" loading="lazy" />
+            </div>
+            <figcaption>Tela do aplicativo com conta de demonstração e dados fictícios.</figcaption>
+          </figure>
+          <div class="split-copy reveal">
+            <span class="eyebrow">Coordenador Finance · Exclusivo Pro</span>
+            <h2 id="coordinator-title">Conte o que aconteceu.<br /><span class="muted-h">O Finance organiza.</span></h2>
+            <p>Uma mensagem ou um áudio para registrar o gasto do dia, uma receita ou cuidar dos seus cadastros — sem preencher tudo sozinho.</p>
+            <ol class="steps">
+              <li><span>01</span><div><h3>Fale do seu jeito</h3><p>Informe valor, categoria e conta ou cartão. Se faltar algo, o coordenador pergunta antes de lançar.</p></div></li>
+              <li><span>02</span><div><h3>Registre e confira</h3><p>Pedidos claros são aplicados automaticamente. Depois, revise, edite ou desfaça.</p></div></li>
+              <li><span>03</span><div><h3>Mais que despesas</h3><p>Cadastre cartões, metas e investimentos pelo chat.</p></div></li>
+            </ol>
+            <a class="btn btn-primary" href="#planos">Ver o Finance Pro</a>
+            <p class="fine">
+              Disponível para contas cadastradas com o Finance Pro. Com sua autorização, mensagens, áudios e dados necessários do perfil são processados pela OpenAI. A IA pode cometer erros: confira os registros. O coordenador não movimenta dinheiro real nem recomenda investimentos.
+              <a href="privacidade.html">Entenda a privacidade do chat.</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FATURA -->
+      <section class="section split" aria-labelledby="invoice-title">
+        <div class="container split-grid reverse">
+          <div class="split-copy reveal">
+            <span class="eyebrow">Cartões e faturas</span>
+            <h2 id="invoice-title">Surpresa na fatura?<br /><span class="muted-h">Aqui não.</span></h2>
+            <p>Acompanhe o limite usado, o fechamento e o vencimento de cada cartão. Compras parceladas aparecem nos meses certos, com a soma batendo com o total.</p>
+            <a class="btn btn-primary" href="#baixar">Começar grátis</a>
+          </div>
+          <div class="split-visual reveal" aria-label="Exemplo ilustrativo de cartão com dados fictícios">
+            <div class="visual-glow violet" aria-hidden="true"></div>
+            <div class="panel">
+              <div class="credit">
+                <small>Finance Card</small>
+                <strong>•••• 4821</strong>
+                <div><span>Fatura atual<b>R$ 1.346,80</b></span><span>Vence dia 18</span></div>
+              </div>
+              <div class="limit"><span>Limite utilizado</span><b>34%</b></div>
+              <div class="track"><i style="width: 34%"></i></div>
+              <div class="tx tx-plain">
+                <span class="tx-icon" style="--c: #f97316">N</span>
+                <span class="tx-body"><b>Notebook</b><small>Parcela 3 de 10</small></span>
+                <strong>R$ 389,90</strong>
+              </div>
+              <div class="tx tx-plain">
+                <span class="tx-icon" style="--c: #4da3ff">S</span>
+                <span class="tx-body"><b>Streaming</b><small>Recorrente · dia 12</small></span>
+                <strong>R$ 39,90</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATÓRIO -->
+      <section class="section split" aria-labelledby="report-title">
+        <div class="container split-grid">
+          <div class="split-visual reveal" aria-label="Exemplo ilustrativo de relatório mensal com dados fictícios">
+            <div class="visual-glow green" aria-hidden="true"></div>
+            <div class="panel">
+              <div class="report-top"><small>Economia no mês</small><strong>R$ 1.284,70</strong><em>+12% vs. mês anterior</em></div>
+              <div class="cat"><span>Moradia</span><div class="track"><i style="width: 82%; --bar: #4da3ff"></i></div><b>R$ 1.240</b></div>
+              <div class="cat"><span>Alimentação</span><div class="track"><i style="width: 58%; --bar: #f97316"></i></div><b>R$ 874</b></div>
+              <div class="cat"><span>Transporte</span><div class="track"><i style="width: 34%; --bar: #a78bfa"></i></div><b>R$ 512</b></div>
+              <div class="cat"><span>Lazer</span><div class="track"><i style="width: 22%; --bar: #4ade80"></i></div><b>R$ 330</b></div>
+            </div>
+          </div>
+          <div class="split-copy reveal">
+            <span class="eyebrow">Relatórios · Pro</span>
+            <h2 id="report-title">Veja pra onde seu<br /><span class="muted-h">dinheiro está indo.</span></h2>
+            <p>Categorias, períodos e comparativos em telas feitas para leitura rápida. Quando quiser, gere um PDF para guardar ou compartilhar.</p>
+            <a class="btn btn-primary" href="#planos">Conhecer o Pro</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEGURANÇA -->
+      <section id="seguranca" class="section" aria-labelledby="security-title">
+        <div class="container">
+          <header class="section-head center reveal">
+            <span class="eyebrow">Privacidade desde o início</span>
+            <h2 id="security-title">Seus registros financeiros<br />não são um produto.</h2>
+            <p>Não vendemos dados, não exibimos anúncios e não conectamos automaticamente às suas contas bancárias.</p>
+          </header>
+          <div class="security-grid">
+            <article class="scard reveal"><span class="ficon"><svg><use href="#i-shield" /></svg></span><h3>Você informa os dados</h3><p>O app usa somente os registros que você decide cadastrar.</p></article>
+            <article class="scard reveal"><span class="ficon"><svg><use href="#i-lock" /></svg></span><h3>Sessão protegida</h3><p>No celular, a autenticação fica no armazenamento seguro do sistema.</p></article>
+            <article class="scard reveal"><span class="ficon"><svg><use href="#i-trash" /></svg></span><h3>Exclusão permanente</h3><p>Apague a conta e os dados associados pelo app ou pela web.</p></article>
+            <article class="scard reveal"><span class="ficon"><svg><use href="#i-eye-off" /></svg></span><h3>Sem rastreamento</h3><p>Sem publicidade e sem rastreamento entre aplicativos.</p></article>
+          </div>
+          <div class="center-cta reveal"><a class="btn btn-ghost" href="privacidade.html">Ler a Política de Privacidade</a></div>
+        </div>
+      </section>
+
+      <!-- PLANOS -->
+      <section id="planos" class="section" aria-labelledby="plans-title">
+        <div class="container">
+          <header class="section-head center reveal">
             <span class="eyebrow">Escolha o seu ritmo</span>
-            <h2 id="plans-title">
-              Comece grátis. Libere mais quando precisar.
-            </h2>
+            <h2 id="plans-title">Comece grátis.<br />Libere mais quando precisar.</h2>
+          </header>
+
+          <div class="billing reveal" role="radiogroup" aria-label="Período de cobrança do Pro">
+            <button type="button" role="radio" aria-checked="true" data-billing="mensal">Mensal</button>
+            <button type="button" role="radio" aria-checked="false" data-billing="anual">Anual <span class="save">−16%</span></button>
           </div>
-          <p>
-            Contas elegíveis podem testar o Pro por 14 dias. Depois, a
-            assinatura é renovada automaticamente pelo período escolhido até o
-            cancelamento na loja.
-          </p>
-        </header>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-number">GRÁTIS</span>
-            <h3>Para organizar o essencial</h3>
-            <p>
-              Um perfil financeiro com carteiras, cartões, receitas, despesas,
-              faturas e agendamentos.
-            </p>
-            <div class="goal-demo">
-              <div><span>Valor</span><b>R$ 0</b></div>
-              <small
-                >Coordenador, metas, investimentos e central de dados ficam
-                bloqueados.</small
-              >
-            </div>
-          </article>
-          <article class="feature-card feature-card-wide">
-            <span class="feature-number"
-              >PRO · TESTE DE 14 DIAS PARA ELEGÍVEIS</span
-            >
-            <h3>R$ 14,90/mês ou R$ 149,90/ano</h3>
-            <p>
-              Coordenador Finance por mensagem ou áudio, até três perfis, metas,
-              investimentos e importação ou exportação em PDF, XLS e CSV. Cancele quando quiser nas configurações da
-              loja.
-            </p>
-            <div class="wallet-demo" aria-label="Recursos do plano Pro">
-              <div>
-                <span class="wallet-color blue"></span>
-                <p><b>Mensal</b><small>Renovação a cada mês</small></p>
-                <strong>R$ 14,90</strong>
-              </div>
-              <div>
-                <span class="wallet-color teal"></span>
-                <p><b>Anual</b><small>Economize R$ 28,90</small></p>
-                <strong>R$ 149,90</strong>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
 
-      <section class="showcase-section" aria-labelledby="showcase-title">
-        <div class="showcase-copy">
-          <span class="eyebrow">Demonstração do aplicativo</span>
-          <h2 id="showcase-title">
-            Informação suficiente para decidir com calma.
-          </h2>
-          <p>
-            As telas priorizam leitura rápida, ações diretas e uma visão clara
-            do mês. Os valores exibidos nesta demonstração são apenas
-            ilustrativos.
-          </p>
-          <ul class="showcase-points">
-            <li><span>01</span> Painel com saldo, receitas e despesas</li>
-            <li><span>02</span> Faturas e limites por cartão</li>
-            <li><span>03</span> Progresso de metas e investimentos</li>
-            <li><span>04</span> Coordenador por mensagem ou áudio no Pro</li>
-          </ul>
-        </div>
-        <div
-          class="screen-gallery"
-          aria-label="Telas demonstrativas do Finance"
-        >
-          <article class="screen-card screen-card-back">
-            <div class="screen-heading"><span>Metas</span><i>＋</i></div>
-            <div class="screen-kpi">
-              <small>Total reservado</small><strong>R$ 12.740</strong>
-            </div>
-            <div class="screen-goal">
-              <div><b>Viagem</b><span>72%</span></div>
-              <i><em style="width: 72%"></em></i
-              ><small>R$ 5.760 de R$ 8.000</small>
-            </div>
-            <div class="screen-goal">
-              <div><b>Reserva</b><span>46%</span></div>
-              <i><em style="width: 46%"></em></i
-              ><small>R$ 6.980 de R$ 15.000</small>
-            </div>
-          </article>
-          <article class="screen-card screen-card-front">
-            <div class="screen-heading"><span>Cartões</span><i>＋</i></div>
-            <div class="credit-card-demo">
-              <small>Finance Card</small><strong>•••• 4821</strong>
-              <div>
-                <span>Fatura atual<br /><b>R$ 1.346,80</b></span
-                ><span>Vence dia 18</span>
+          <div class="plans">
+            <article class="plan reveal">
+              <h3>Grátis</h3>
+              <p class="plan-desc">Para organizar o essencial.</p>
+              <div class="price"><strong>R$ 0</strong></div>
+              <a class="btn btn-ghost btn-block" href="#baixar">Começar grátis</a>
+              <ul class="checks">
+                <li><svg><use href="#i-check" /></svg>Um perfil financeiro</li>
+                <li><svg><use href="#i-check" /></svg>Carteiras e cartões</li>
+                <li><svg><use href="#i-check" /></svg>Receitas, despesas e faturas</li>
+                <li><svg><use href="#i-check" /></svg>Agendamentos e parcelamentos</li>
+              </ul>
+            </article>
+            <article class="plan plan-pro reveal">
+              <span class="plan-badge">Teste de 14 dias para elegíveis</span>
+              <h3>Finance Pro</h3>
+              <p class="plan-desc">Para quem quer o controle completo.</p>
+              <div class="price">
+                <strong data-price-mensal="R$ 14,90" data-price-anual="R$ 149,90">R$ 14,90</strong>
+                <span data-unit-mensal="/mês" data-unit-anual="/ano">/mês</span>
               </div>
-            </div>
-            <div class="limit-label">
-              <span>Limite utilizado</span><b>34%</b>
-            </div>
-            <div class="goal-track"><i style="width: 34%"></i></div>
-            <div class="screen-movement">
-              <i>↗</i><span><b>Mercado</b><small>Hoje, 14:20</small></span
-              ><strong>R$ 186,40</strong>
-            </div>
-            <div class="screen-movement">
-              <i>↗</i><span><b>Internet</b><small>Ontem, 08:10</small></span
-              ><strong>R$ 99,90</strong>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section
-        id="como-usar"
-        class="section-block how-section"
-        aria-labelledby="how-title"
-      >
-        <header class="section-heading compact-heading">
-          <div>
-            <span class="eyebrow">Como utilizar</span>
-            <h2 id="how-title">Comece simples. Evolua no seu ritmo.</h2>
+              <p class="price-note" data-note-mensal="Renovação a cada mês." data-note-anual="Economize R$ 28,90 por ano.">Renovação a cada mês.</p>
+              <a class="btn btn-primary btn-block" href="#baixar">Testar o Pro</a>
+              <ul class="checks">
+                <li><svg><use href="#i-check" /></svg>Tudo do plano Grátis</li>
+                <li><svg><use href="#i-check" /></svg>Coordenador por mensagem ou áudio</li>
+                <li><svg><use href="#i-check" /></svg>Até três perfis</li>
+                <li><svg><use href="#i-check" /></svg>Metas e investimentos</li>
+                <li><svg><use href="#i-check" /></svg>Relatórios e PDF</li>
+                <li><svg><use href="#i-check" /></svg>Importação e exportação em PDF, XLS e CSV</li>
+              </ul>
+            </article>
           </div>
-          <p>
-            Você não precisa organizar toda a vida financeira no primeiro dia.
+          <p class="plans-legal">
+            A assinatura é renovada automaticamente pelo período escolhido até o cancelamento nas configurações da loja.
+            Assinatura e alterações do Pro são feitas pelo app instalado pela Google Play.
           </p>
-        </header>
-        <ol class="steps-grid">
-          <li>
-            <span>1</span>
-            <h3>Crie sua conta</h3>
-            <p>Use seu e-mail para proteger e sincronizar seus registros.</p>
-          </li>
-          <li>
-            <span>2</span>
-            <h3>Cadastre o básico</h3>
-            <p>Adicione uma carteira, seus cartões e o saldo inicial.</p>
-          </li>
-          <li>
-            <span>3</span>
-            <h3>Registre o movimento</h3>
-            <p>Inclua receitas, despesas, compras e transferências. No Pro, você também pode registrar pelo <a href="#coordenador">Coordenador Finance</a>.</p>
-          </li>
-          <li>
-            <span>4</span>
-            <h3>Acompanhe e ajuste</h3>
-            <p>Use relatórios, metas e lembretes para melhorar sua rotina.</p>
-          </li>
-        </ol>
-      </section>
-
-      <section
-        id="seguranca"
-        class="security-section"
-        aria-labelledby="security-title"
-      >
-        <div class="security-copy">
-          <span class="eyebrow eyebrow-light">Privacidade desde o início</span>
-          <h2 id="security-title">
-            Seus registros financeiros não são um produto.
-          </h2>
-          <p>
-            O Finance foi desenhado para organização pessoal. Não vendemos
-            dados, não exibimos anúncios e não conectamos automaticamente às
-            suas contas bancárias.
-          </p>
-          <a class="button button-light" href="privacidade.html"
-            >Ler a Política de Privacidade</a
-          >
-        </div>
-        <div class="security-grid">
-          <article>
-            <span aria-hidden="true">◇</span>
-            <h3>Você informa os dados</h3>
-            <p>
-              O aplicativo usa somente os registros que você decide cadastrar.
-            </p>
-          </article>
-          <article>
-            <span aria-hidden="true">⌁</span>
-            <h3>Sessão protegida</h3>
-            <p>
-              No celular, a autenticação fica no armazenamento seguro do
-              sistema.
-            </p>
-          </article>
-          <article>
-            <span aria-hidden="true">×</span>
-            <h3>Exclusão permanente</h3>
-            <p>
-              Você pode apagar a conta e os dados associados pelo app ou
-              solicitar pela web.
-            </p>
-          </article>
-          <article>
-            <span aria-hidden="true">◌</span>
-            <h3>Sem rastreamento</h3>
-            <p>Não usamos publicidade nem rastreamento entre aplicativos.</p>
-          </article>
         </div>
       </section>
 
-      <section
-        id="documentos"
-        class="section-block documents-section"
-        aria-labelledby="documents-title"
-      >
-        <header class="section-heading compact-heading">
-          <div>
-            <span class="eyebrow">Transparência</span>
-            <h2 id="documents-title">
-              Informações e controle, sempre acessíveis.
-            </h2>
+      <!-- DOWNLOAD -->
+      <section id="baixar" class="section" aria-labelledby="download-title">
+        <div class="container">
+          <div class="download reveal">
+            <div class="download-copy">
+              <span class="eyebrow">Baixe o Finance</span>
+              <h2 id="download-title">No celular e<br />também no Windows.</h2>
+              <p>Entre com a mesma conta e continue sua organização em uma tela maior. Windows 10 ou 11, 64 bits.</p>
+            </div>
+            <div class="download-card">
+              <span class="win"><svg><use href="#i-windows" /></svg></span>
+              <div>
+                <small>Aplicativo para Windows</small>
+                <strong>Finance Desktop</strong>
+                <span>Versão 1.8.0 · Revisão 26</span>
+              </div>
+              <a class="btn btn-primary" href="https://github.com/patrickvca/FinanceApp-legal/releases/download/v1.8.0-windows.26/Finance-Setup.exe">Baixar .exe</a>
+            </div>
+            <p class="fine download-fine">O aplicativo para computador não processa pagamentos. Para assinar ou alterar o Finance Pro, use o app instalado pela Google Play. O acesso é liberado no computador ao entrar com a mesma conta.</p>
           </div>
-          <p>
-            Consulte os documentos do Finance sem precisar entrar no aplicativo.
-          </p>
-        </header>
-        <div class="document-grid document-grid-three">
-          <a class="document-card" href="privacidade.html">
-            <span class="document-icon" aria-hidden="true">◈</span>
-            <span class="document-content"
-              ><strong>Política de Privacidade</strong
-              ><span>Dados tratados, finalidades e direitos.</span></span
-            >
-            <span class="document-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="document-card" href="termos.html">
-            <span class="document-icon violet" aria-hidden="true">✓</span>
-            <span class="document-content"
-              ><strong>Termos de Uso</strong
-              ><span>Condições e responsabilidades.</span></span
-            >
-            <span class="document-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="document-card deletion-card" href="exclusao-de-conta.html">
-            <span class="document-icon danger" aria-hidden="true">×</span>
-            <span class="document-content"
-              ><strong>Exclusão de conta</strong
-              ><span>Solicite a remoção dos seus dados.</span></span
-            >
-            <span class="document-arrow" aria-hidden="true">→</span>
-          </a>
         </div>
       </section>
 
-      <section class="contact-band" aria-label="Contato e suporte">
-        <div>
-          <span class="eyebrow">Fale com o Finance</span>
-          <h2>Ficou com alguma dúvida?</h2>
+      <!-- FAQ -->
+      <section id="duvidas" class="section" aria-labelledby="faq-title">
+        <div class="container faq-wrap">
+          <header class="section-head reveal">
+            <span class="eyebrow">Dúvidas frequentes</span>
+            <h2 id="faq-title">Ficou com<br />alguma dúvida?</h2>
+            <p>Se não encontrar a resposta, fale com a gente em <a href="mailto:financeappvca@gmail.com">financeappvca@gmail.com</a>.</p>
+          </header>
+          <div class="faq">
+            <details class="reveal">
+              <summary>O Finance acessa minha conta bancária?</summary>
+              <p>Não. O Finance não se conecta automaticamente a bancos. Você registra as movimentações que quiser, manualmente ou pelo Coordenador no Pro.</p>
+            </details>
+            <details class="reveal">
+              <summary>O Finance movimenta dinheiro?</summary>
+              <p>Não. É uma ferramenta de organização: nenhuma transferência, pagamento ou investimento real é feito pelo app.</p>
+            </details>
+            <details class="reveal">
+              <summary>Preciso pagar para usar?</summary>
+              <p>Não. O plano Grátis cobre carteiras, cartões, receitas, despesas, faturas e agendamentos. O Pro libera o Coordenador, metas, investimentos, relatórios e a central de dados.</p>
+            </details>
+            <details class="reveal">
+              <summary>Como funciona o Coordenador Finance?</summary>
+              <p>No Pro, você envia uma mensagem ou áudio e o coordenador registra ou pergunta o que faltar. Com sua autorização, o conteúdo é processado pela OpenAI. Confira sempre os registros.</p>
+            </details>
+            <details class="reveal">
+              <summary>Como excluo minha conta?</summary>
+              <p>Pelo próprio app, em Configurações, ou pela <a href="exclusao-de-conta.html">página de exclusão de conta</a>. A conta e os dados associados são apagados de forma permanente.</p>
+            </details>
+          </div>
         </div>
-        <a class="button button-primary" href="mailto:financeappvca@gmail.com"
-          >financeappvca@gmail.com</a
-        >
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="final" aria-labelledby="final-title">
+        <div class="final-glow" aria-hidden="true"></div>
+        <div class="container center">
+          <h2 id="final-title">Comece simples.<br /><span class="grad">Evolua no seu ritmo.</span></h2>
+          <p>Crie sua conta, cadastre o básico e registre o movimento. O resto o Finance ajuda a entender.</p>
+          <a class="btn btn-primary btn-lg" href="#baixar">Começar grátis</a>
+          <small class="final-micro">Sem anúncios · Sem acesso ao banco · Cancele quando quiser</small>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <span>Finance · Organização financeira pessoal</span>
-      <div class="footer-links">
-        <a href="privacidade.html">Privacidade</a
-        ><a href="termos.html">Termos</a
-        ><a href="exclusao-de-conta.html">Excluir conta</a>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="#topo"><img src="assets/app-icon.png" alt="" width="28" height="28" /><span>Finance</span></a>
+        <nav class="footer-links" aria-label="Documentos">
+          <a href="privacidade.html">Privacidade</a>
+          <a href="termos.html">Termos de Uso</a>
+          <a href="exclusao-de-conta.html">Excluir conta</a>
+          <a href="mailto:financeappvca@gmail.com">Contato</a>
+        </nav>
+        <small>Finance · Organização financeira pessoal</small>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        // Menu mobile
+        var toggle = document.querySelector(".nav-toggle");
+        var menu = document.getElementById("menu-mobile");
+        function setMenu(open) {
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+          menu.hidden = !open;
+          document.body.classList.toggle("menu-open", open);
+        }
+        toggle.addEventListener("click", function () {
+          setMenu(toggle.getAttribute("aria-expanded") !== "true");
+        });
+        menu.addEventListener("click", function (e) {
+          if (e.target.closest("a")) setMenu(false);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !menu.hidden) { setMenu(false); toggle.focus(); }
+        });
+
+        // Header com fundo ao rolar
+        var nav = document.querySelector("[data-nav]");
+        function onScroll() { nav.classList.toggle("scrolled", window.scrollY > 12); }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        // Alternância mensal/anual
+        var buttons = document.querySelectorAll("[data-billing]");
+        buttons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var mode = btn.dataset.billing;
+            buttons.forEach(function (b) { b.setAttribute("aria-checked", String(b === btn)); });
+            document.querySelectorAll("[data-price-" + mode + "]").forEach(function (el) { el.textContent = el.dataset["price" + cap(mode)]; });
+            document.querySelectorAll("[data-unit-" + mode + "]").forEach(function (el) { el.textContent = el.dataset["unit" + cap(mode)]; });
+            document.querySelectorAll("[data-note-" + mode + "]").forEach(function (el) { el.textContent = el.dataset["note" + cap(mode)]; });
+          });
+        });
+        function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+        // Revelar ao rolar
+        var items = document.querySelectorAll(".reveal");
+        if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          items.forEach(function (el) { el.classList.add("in"); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); }
+          });
+        }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+        items.forEach(function (el) { io.observe(el); });
+      })();
+    </script>
   </body>
 </html>
