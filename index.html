@@ -26,7 +26,7 @@
     <meta name="twitter:image" content="https://patrickvca.github.io/FinanceApp-legal/assets/og.png" />
     <title>Finance — Sua vida financeira, mais clara</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="landing.css" />
+    <link rel="stylesheet" href="landing.css?v=2" />
     <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
@@ -345,47 +345,70 @@
             <h2 id="plans-title">Comece grátis.<br />Libere mais quando precisar.</h2>
           </header>
 
-          <div class="billing reveal" role="radiogroup" aria-label="Período de cobrança do Pro">
-            <button type="button" role="radio" aria-checked="true" data-billing="mensal">Mensal</button>
-            <button type="button" role="radio" aria-checked="false" data-billing="anual">Anual <span class="save">−16%</span></button>
-          </div>
+          <div class="pricing">
+            <form class="picker reveal" data-pricing>
+              <fieldset class="billing">
+                <legend class="vh">Período de cobrança do Pro</legend>
+                <label><input class="vh" type="radio" name="periodo" value="mensal" checked /><span>Mensal</span></label>
+                <label><input class="vh" type="radio" name="periodo" value="anual" /><span>Anual <em class="save">−16%</em></span></label>
+                <i class="billing-pill" aria-hidden="true"></i>
+              </fieldset>
 
-          <div class="plans">
-            <article class="plan reveal">
-              <h3>Grátis</h3>
-              <p class="plan-desc">Para organizar o essencial.</p>
-              <div class="price"><strong>R$ 0</strong></div>
-              <a class="btn btn-ghost btn-block" href="#baixar">Começar grátis</a>
-              <ul class="checks">
-                <li><svg><use href="#i-check" /></svg>Um perfil financeiro</li>
-                <li><svg><use href="#i-check" /></svg>Carteiras e cartões</li>
-                <li><svg><use href="#i-check" /></svg>Receitas, despesas e faturas</li>
-                <li><svg><use href="#i-check" /></svg>Agendamentos e parcelamentos</li>
-              </ul>
-            </article>
-            <article class="plan plan-pro reveal">
-              <span class="plan-badge">Teste de 14 dias para elegíveis</span>
-              <h3>Finance Pro</h3>
-              <p class="plan-desc">Para quem quer o controle completo.</p>
-              <div class="price">
-                <strong data-price-mensal="R$ 14,90" data-price-anual="R$ 149,90">R$ 14,90</strong>
-                <span data-unit-mensal="/mês" data-unit-anual="/ano">/mês</span>
-              </div>
-              <p class="price-note" data-note-mensal="Renovação a cada mês." data-note-anual="Economize R$ 28,90 por ano.">Renovação a cada mês.</p>
-              <a class="btn btn-primary btn-block" href="#baixar">Testar o Pro</a>
-              <ul class="checks">
-                <li><svg><use href="#i-check" /></svg>Tudo do plano Grátis</li>
-                <li><svg><use href="#i-check" /></svg>Coordenador por mensagem ou áudio</li>
-                <li><svg><use href="#i-check" /></svg>Até três perfis</li>
-                <li><svg><use href="#i-check" /></svg>Metas e investimentos</li>
-                <li><svg><use href="#i-check" /></svg>Relatórios e PDF</li>
-                <li><svg><use href="#i-check" /></svg>Importação e exportação em PDF, XLS e CSV</li>
-              </ul>
-            </article>
+              <fieldset class="picks">
+                <legend class="vh">Plano</legend>
+                <label class="pick">
+                  <input class="vh" type="radio" name="plano" value="gratis" />
+                  <span class="pick-body">
+                    <span class="pick-name">Grátis</span>
+                    <span class="pick-price"><strong>R$ 0</strong><span class="pick-unit">/mês</span></span>
+                    <span class="pick-note">Para organizar o essencial.</span>
+                  </span>
+                  <i class="pick-dot" aria-hidden="true"></i>
+                </label>
+                <label class="pick">
+                  <input class="vh" type="radio" name="plano" value="pro" checked />
+                  <span class="pick-body">
+                    <span class="pick-name">Finance Pro <em class="pick-badge">Teste de 14 dias</em></span>
+                    <span class="pick-price">
+                      <strong>R$ <span data-price data-mensal="14,90" data-anual="149,90">14,90</span></strong><span class="pick-unit" data-swap data-mensal="/mês" data-anual="/ano">/mês</span>
+                    </span>
+                    <span class="pick-note pick-save" data-swap data-mensal="Renovação a cada mês." data-anual="Economize R$ 28,90 por ano.">Renovação a cada mês.</span>
+                  </span>
+                  <i class="pick-dot" aria-hidden="true"></i>
+                </label>
+                <i class="pick-outline" aria-hidden="true"></i>
+              </fieldset>
+
+              <a class="btn btn-primary btn-lg btn-block" href="#baixar" data-plan-cta data-gratis="Começar grátis" data-pro="Testar o Pro">Testar o Pro</a>
+            </form>
+
+            <div class="includes reveal" aria-live="polite">
+              <section data-plan="gratis">
+                <h3>Incluso no Grátis</h3>
+                <ul class="checks">
+                  <li><svg><use href="#i-check" /></svg>Um perfil financeiro</li>
+                  <li><svg><use href="#i-check" /></svg>Carteiras e cartões</li>
+                  <li><svg><use href="#i-check" /></svg>Receitas, despesas e faturas</li>
+                  <li><svg><use href="#i-check" /></svg>Agendamentos e parcelamentos</li>
+                </ul>
+              </section>
+              <section data-plan="pro">
+                <h3>Incluso no Finance Pro</h3>
+                <ul class="checks">
+                  <li><svg><use href="#i-check" /></svg>Tudo do plano Grátis</li>
+                  <li><svg><use href="#i-check" /></svg>Coordenador por mensagem ou áudio</li>
+                  <li><svg><use href="#i-check" /></svg>Até três perfis</li>
+                  <li><svg><use href="#i-check" /></svg>Metas e investimentos</li>
+                  <li><svg><use href="#i-check" /></svg>Relatórios e PDF</li>
+                  <li><svg><use href="#i-check" /></svg>Importação e exportação em PDF, XLS e CSV</li>
+                </ul>
+              </section>
+            </div>
           </div>
           <p class="plans-legal">
             A assinatura é renovada automaticamente pelo período escolhido até o cancelamento nas configurações da loja.
             Assinatura e alterações do Pro são feitas pelo app instalado pela Google Play.
+            O teste de 14 dias vale para contas elegíveis.
           </p>
         </div>
       </section>
@@ -498,18 +521,59 @@
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
 
-        // Alternância mensal/anual
-        var buttons = document.querySelectorAll("[data-billing]");
-        buttons.forEach(function (btn) {
-          btn.addEventListener("click", function () {
-            var mode = btn.dataset.billing;
-            buttons.forEach(function (b) { b.setAttribute("aria-checked", String(b === btn)); });
-            document.querySelectorAll("[data-price-" + mode + "]").forEach(function (el) { el.textContent = el.dataset["price" + cap(mode)]; });
-            document.querySelectorAll("[data-unit-" + mode + "]").forEach(function (el) { el.textContent = el.dataset["unit" + cap(mode)]; });
-            document.querySelectorAll("[data-note-" + mode + "]").forEach(function (el) { el.textContent = el.dataset["note" + cap(mode)]; });
+        // Seletor de planos
+        var pricing = document.querySelector("[data-pricing]");
+        var price = pricing.querySelector("[data-price]");
+        var outline = pricing.querySelector(".pick-outline");
+        var cta = pricing.querySelector("[data-plan-cta]");
+
+        // Preço com algarismos que rolam, alinhados pela direita para a vírgula não pular.
+        function renderPrice(text) {
+          var cols = price.querySelector(".roll");
+          if (!cols) {
+            price.textContent = "";
+            price.insertAdjacentHTML("beforeend", '<span class="vh"></span><span class="roll" aria-hidden="true"></span>');
+            cols = price.querySelector(".roll");
+          }
+          price.querySelector(".vh").textContent = text;
+          while (cols.children.length > text.length) cols.removeChild(cols.firstChild);
+          while (cols.children.length < text.length) {
+            var col = document.createElement("span");
+            cols.insertBefore(col, cols.firstChild);
+          }
+          text.split("").forEach(function (char, i) {
+            var col = cols.children[i];
+            if (!/[0-9]/.test(char)) { col.className = "roll-sep"; col.textContent = char; return; }
+            if (col.className !== "roll-digit") {
+              col.className = "roll-digit";
+              col.innerHTML = "<span>0<br />1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9</span>";
+              col.offsetWidth; // aplica o zero antes de animar
+            }
+            col.style.setProperty("--d", char);
           });
-        });
-        function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+        }
+
+        function placeOutline() {
+          var pick = pricing.querySelector('[name="plano"]:checked').closest(".pick");
+          outline.style.transform = "translateY(" + pick.offsetTop + "px)";
+          outline.style.height = pick.offsetHeight + "px";
+        }
+
+        function updatePricing() {
+          var period = pricing.elements.periodo.value;
+          var plan = pricing.elements.plano.value;
+          renderPrice(price.dataset[period]);
+          pricing.querySelectorAll("[data-swap]").forEach(function (el) { el.textContent = el.dataset[period]; });
+          cta.textContent = cta.dataset[plan];
+          document.querySelectorAll("[data-plan]").forEach(function (el) { el.hidden = el.dataset.plan !== plan; });
+          placeOutline();
+        }
+        pricing.addEventListener("change", updatePricing);
+        pricing.addEventListener("submit", function (e) { e.preventDefault(); });
+        if ("ResizeObserver" in window) new ResizeObserver(placeOutline).observe(pricing);
+        else window.addEventListener("resize", placeOutline);
+        pricing.classList.add("ready");
+        updatePricing();
 
         // Revelar ao rolar
         var items = document.querySelectorAll(".reveal");

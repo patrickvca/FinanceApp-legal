@@ -279,22 +279,49 @@ p { margin: 0; }
 .scard h3 { margin-top: 26px; font-size: 1.15rem; }
 
 /* Planos */
-.billing { display: flex; width: fit-content; margin: -20px auto 40px; padding: 5px; border-radius: 999px; border: 1px solid var(--line-strong); background: rgba(255, 255, 255, 0.03); }
-.billing button { min-height: 40px; padding: 0 20px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font: 700 0.9rem "Plus Jakarta Sans", sans-serif; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: background-color 0.2s, color 0.2s; }
-.billing button[aria-checked="true"] { background: var(--surface-2); color: var(--fg); }
-.save { font-size: 0.72rem; padding: 2px 7px; border-radius: 999px; background: rgba(74, 222, 128, 0.16); color: var(--income); }
-.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 400px)); justify-content: center; gap: 18px; }
-.plan { position: relative; padding: 34px 30px; border-radius: 26px; border: 1px solid var(--line); background: rgba(15, 23, 42, 0.55); display: flex; flex-direction: column; }
-.plan-pro { border-color: rgba(77, 163, 255, 0.5); background: linear-gradient(180deg, rgba(21, 94, 239, 0.16), rgba(15, 23, 42, 0.6) 55%); box-shadow: 0 30px 80px -40px rgba(21, 94, 239, 0.7); }
-.plan-badge { position: absolute; top: -13px; left: 30px; padding: 5px 12px; border-radius: 999px; background: var(--primary); color: #04101f; font-size: 0.74rem; font-weight: 800; }
-.plan h3 { font-size: 1.4rem; }
-.plan-desc { color: var(--muted); font-size: 0.92rem; margin-top: 6px; }
-.price { display: flex; align-items: baseline; gap: 6px; margin: 26px 0 4px; }
-.price strong { font: 700 2.8rem var(--display); letter-spacing: -0.04em; }
-.price span { color: var(--muted); font-weight: 600; }
-.price-note { color: var(--income); font-size: 0.85rem; font-weight: 600; min-height: 1.4em; }
-.plan .btn { margin-top: 22px; }
-.plan:not(.plan-pro) .btn { margin-top: calc(22px + 1.4em + 4px); }
+.vh { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.pricing { display: grid; grid-template-columns: minmax(0, 440px) minmax(0, 360px); justify-content: center; align-items: center; gap: 56px; }
+.picker { display: grid; gap: 14px; padding: 14px; border-radius: 32px; border: 1px solid var(--line-strong); background: linear-gradient(180deg, rgba(21, 94, 239, 0.14), rgba(15, 23, 42, 0.72) 60%); box-shadow: 0 30px 80px -40px rgba(21, 94, 239, 0.7); }
+.picker fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+
+.picker .billing { position: relative; display: grid; grid-template-columns: 1fr 1fr; padding: 5px; border-radius: 999px; background: rgba(8, 13, 25, 0.7); }
+.billing label { position: relative; z-index: 1; cursor: pointer; }
+.billing label > span { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; border-radius: 999px; color: var(--muted); font-weight: 700; font-size: 0.95rem; transition: color 0.3s; }
+.billing input:checked + span { color: var(--fg); }
+.billing-pill { position: absolute; inset: 5px auto 5px 5px; width: calc(50% - 5px); border-radius: 999px; background: var(--surface-2); box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.8); transition: transform 0.3s; }
+.billing:has([value="anual"]:checked) .billing-pill { transform: translateX(100%); }
+.save { font-size: 0.72rem; font-style: normal; padding: 2px 7px; border-radius: 999px; background: rgba(74, 222, 128, 0.16); color: var(--income); }
+
+.picker .picks { position: relative; display: grid; gap: 12px; }
+.pick { display: flex; justify-content: space-between; gap: 16px; padding: 18px 20px; border-radius: 20px; border: 2px solid var(--line-strong); cursor: pointer; transition: background-color 0.3s; }
+.pick:hover { background: rgba(255, 255, 255, 0.03); }
+.pick-body { display: grid; gap: 4px; min-width: 0; }
+.pick-name { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font: 700 1.25rem var(--display); letter-spacing: -0.02em; }
+.pick-badge { padding: 3px 9px; border-radius: 8px; background: rgba(251, 191, 36, 0.16); color: var(--warning); font: 700 0.74rem "Plus Jakarta Sans", sans-serif; letter-spacing: 0; }
+.pick-price { display: flex; align-items: baseline; gap: 6px; }
+.pick-price strong { font: 700 1.7rem/1.2 var(--display); letter-spacing: -0.03em; white-space: nowrap; }
+.pick-unit { color: var(--muted); font-weight: 600; }
+.pick-note { color: var(--muted); font-size: 0.88rem; }
+.pick-save { color: var(--income); font-weight: 600; }
+.pick-dot { flex: none; width: 24px; height: 24px; margin-top: 3px; border-radius: 50%; border: 2px solid #64748b; display: grid; place-items: center; transition: border-color 0.3s; }
+.pick-dot::after { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); opacity: 0; transition: opacity 0.3s; }
+.pick input:checked ~ .pick-dot { border-color: var(--primary); }
+.pick input:checked ~ .pick-dot::after { opacity: 1; }
+.pick-outline { position: absolute; inset: 0 0 auto; border: 3px solid var(--primary); border-radius: 20px; pointer-events: none; transition: transform 0.3s, height 0.3s; }
+.picker:not(.ready) .pick-outline { display: none; }
+.picker:not(.ready) .pick:has(input:checked) { border-color: var(--primary); }
+.billing label:has(:focus-visible) > span, .pick:has(:focus-visible) { outline: 2px solid var(--fg); outline-offset: 3px; }
+
+.roll { display: inline-flex; line-height: 1.2; font-variant-numeric: tabular-nums; vertical-align: bottom; }
+.roll-digit { display: block; height: 1.2em; overflow: hidden; animation: roll-in 0.3s; }
+.roll-digit > span { display: block; transform: translateY(calc(var(--d, 0) * -10%)); transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes roll-in { from { opacity: 0; max-width: 0; } to { opacity: 1; max-width: 1em; } }
+
+.includes h3 { font-size: 1.4rem; }
+.includes section + section { margin-top: 32px; }
+.js .includes section { margin-top: 0; animation: includes-in 0.3s; }
+@keyframes includes-in { from { opacity: 0; transform: translateY(6px); } }
+@media (min-width: 901px) { .js .includes { min-height: 290px; } }
 .checks { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; font-size: 0.93rem; }
 .checks li { display: flex; gap: 10px; align-items: flex-start; }
 .checks svg { color: var(--primary); margin-top: 4px; stroke-width: 2.6; }
@@ -355,6 +382,7 @@ p { margin: 0; }
   .js .reveal { transform: none; }
   .js .phone.reveal { transform: translateX(-50%); }
   .btn, .fcard, .scard { transition: none; }
+  .picker *, .picker *::after, .includes section { transition: none !important; animation: none !important; }
 }
 
 /* Responsivo */
@@ -383,7 +411,8 @@ p { margin: 0; }
   .split-grid.reverse .split-copy { order: 0; }
   .split-visual { min-height: 0; }
   .faq-wrap .section-head { position: static; }
-  .plans { grid-template-columns: minmax(0, 480px); }
+  .pricing { grid-template-columns: minmax(0, 480px); gap: 36px; }
+  .includes { padding-inline: 8px; }
 }
 
 @media (max-width: 640px) {
@@ -403,8 +432,8 @@ p { margin: 0; }
   .phone-img { width: 260px; }
   .panel { padding: 18px; }
   .cat { grid-template-columns: 84px 1fr 64px; gap: 8px; }
-  .plan { padding: 30px 22px; }
-  .billing { margin-top: -24px; }
+  .picker { padding: 12px; border-radius: 28px; }
+  .pick { padding: 16px; }
   .download-card .btn { width: 100%; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }
