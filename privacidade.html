@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Política de Privacidade do aplicativo Finance." />
-    <meta name="theme-color" content="#155eef" />
+    <meta name="theme-color" content="#080d19" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:title" content="Política de Privacidade — Finance" />
@@ -15,118 +15,183 @@
     />
     <title>Política de Privacidade — Finance</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="landing.css?v=2" />
+    <link rel="stylesheet" href="legal.css" />
   </head>
-  <body>
+  <body class="legal-page">
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Finance — início">
-        <img class="brand-logo" src="assets/app-icon.png" alt="" />
-        <span>Finance</span>
-      </a>
-      <nav aria-label="Documentos e suporte">
+
+    <header class="nav" data-nav>
+      <div class="nav-inner">
+        <a class="brand" href="index.html" aria-label="Finance — início">
+          <img src="assets/app-icon.png" alt="" width="32" height="32" />
+          <span>Finance</span>
+        </a>
+        <nav class="nav-links" aria-label="Documentos">
+          <a href="index.html">Início</a>
+          <a href="privacidade.html" aria-current="page">Privacidade</a>
+          <a href="termos.html">Termos de Uso</a>
+          <a href="exclusao-de-conta.html">Excluir conta</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav id="menu-mobile" class="nav-mobile" aria-label="Documentos (celular)" hidden>
         <a href="index.html">Início</a>
-        <a class="active" href="privacidade.html" aria-current="page">Privacidade</a>
-        <a href="termos.html">Termos</a>
+        <a href="privacidade.html" aria-current="page">Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
         <a href="exclusao-de-conta.html">Excluir conta</a>
       </nav>
     </header>
 
-    <main id="conteudo" class="legal-main">
-      <header class="legal-heading">
-        <a class="back-link" href="index.html">← Todos os documentos</a>
-        <span class="eyebrow">Finance</span>
-        <h1>Política de Privacidade</h1>
+    <main id="conteudo">
+      <header class="legal-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container">
+          <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Voltar ao início</a>
+          <span class="eyebrow">Finance</span>
+          <h1>Política de Privacidade</h1>
+          <p class="legal-updated">Atualizado em 16 de outubro de 2026</p>
+        </div>
       </header>
 
-      <article class="legal-document">
-        <section>
-          <h2>1. Dados tratados pelo Finance</h2>
-          <p>O Finance trata somente os dados necessários para autenticação, sincronização e organização financeira pessoal.</p>
-          <ul>
-            <li>e-mail, identificador técnico da conta e informações de sessão;</li>
-            <li>nome, e-mail e dados básicos de perfil fornecidos pelo Google quando o usuário escolher esse meio de acesso;</li>
-            <li>nome informado no perfil;</li>
-            <li>datas de acesso ao aplicativo e fuso horário para acompanhar a sequência diária de contas cadastradas;</li>
-            <li>carteiras, cartões, saldos, receitas, despesas, categorias e movimentações cadastradas pelo usuário;</li>
-            <li>metas, investimentos, agendamentos, recorrências, parcelamentos, faturas, pagamentos e transferências registrados no aplicativo;</li>
-            <li>preferências de idioma, tema e lembretes locais.</li>
-            <li>status da assinatura, produto adquirido, validade do acesso Pro e identificadores técnicos da transação fornecidos pela loja;</li>
-            <li>mensagens, transcrições e registro do consentimento para o coordenador Pro, quando o usuário optar por utilizá-lo.</li>
-          </ul>
-        </section>
+      <div class="container legal-layout">
+        <aside class="legal-toc">
+          <nav class="toc-desktop" aria-label="Nesta página">
+            <strong>Nesta página</strong>
+            <ul>
+              <li><a href="#dados-tratados-pelo-finance">1. Dados tratados pelo Finance</a></li>
+              <li><a href="#dados-que-o-aplicativo-nao-acessa">2. Dados que o aplicativo não acessa</a></li>
+              <li><a href="#finalidades">3. Finalidades</a></li>
+              <li><a href="#armazenamento-e-prestadores">4. Armazenamento e prestadores</a></li>
+              <li><a href="#arquivos-de-importacao-e-exportacao">5. Arquivos de importação e exportação</a></li>
+              <li><a href="#notificacoes">6. Notificações</a></li>
+              <li><a href="#seguranca-e-sessao">7. Segurança e sessão</a></li>
+              <li><a href="#retencao-e-exclusao">8. Retenção e exclusão</a></li>
+              <li><a href="#direitos-do-titular">9. Direitos do titular</a></li>
+              <li><a href="#atualizacoes-e-contato">10. Atualizações e contato</a></li>
+            </ul>
+          </nav>
+          <details class="toc-mobile">
+            <summary>Nesta página</summary>
+            <nav aria-label="Nesta página">
+              <ul>
+                <li><a href="#dados-tratados-pelo-finance">1. Dados tratados pelo Finance</a></li>
+                <li><a href="#dados-que-o-aplicativo-nao-acessa">2. Dados que o aplicativo não acessa</a></li>
+                <li><a href="#finalidades">3. Finalidades</a></li>
+                <li><a href="#armazenamento-e-prestadores">4. Armazenamento e prestadores</a></li>
+                <li><a href="#arquivos-de-importacao-e-exportacao">5. Arquivos de importação e exportação</a></li>
+                <li><a href="#notificacoes">6. Notificações</a></li>
+                <li><a href="#seguranca-e-sessao">7. Segurança e sessão</a></li>
+                <li><a href="#retencao-e-exclusao">8. Retenção e exclusão</a></li>
+                <li><a href="#direitos-do-titular">9. Direitos do titular</a></li>
+                <li><a href="#atualizacoes-e-contato">10. Atualizações e contato</a></li>
+              </ul>
+            </nav>
+          </details>
+        </aside>
 
-        <section>
-          <h2>2. Dados que o aplicativo não acessa</h2>
-          <p>O Finance não se conecta a bancos, não movimenta dinheiro real e não acessa contatos, localização, câmera ou fotos. Não utiliza publicidade ou rastreamento entre aplicativos. O microfone é solicitado somente quando o usuário decide gravar uma mensagem para o coordenador Pro, em primeiro plano.</p>
-        </section>
+        <div class="legal-body">
+          <article class="legal-doc">
+            <section>
+              <h2 id="dados-tratados-pelo-finance">1. Dados tratados pelo Finance</h2>
+              <p>O Finance trata somente os dados necessários para autenticação, sincronização e organização financeira pessoal.</p>
+              <ul>
+                <li>e-mail, identificador técnico da conta e informações de sessão;</li>
+                <li>nome, e-mail e dados básicos de perfil fornecidos pelo Google quando o usuário escolher esse meio de acesso;</li>
+                <li>nome informado no perfil;</li>
+                <li>datas de acesso ao aplicativo e fuso horário para acompanhar a sequência diária de contas cadastradas;</li>
+                <li>carteiras, cartões, saldos, receitas, despesas, categorias e movimentações cadastradas pelo usuário;</li>
+                <li>metas, investimentos, agendamentos, recorrências, parcelamentos, faturas, pagamentos e transferências registrados no aplicativo;</li>
+                <li>preferências de idioma, tema e lembretes locais.</li>
+                <li>status da assinatura, produto adquirido, validade do acesso Pro e identificadores técnicos da transação fornecidos pela loja;</li>
+                <li>mensagens, transcrições e registro do consentimento para o coordenador Pro, quando o usuário optar por utilizá-lo.</li>
+              </ul>
+            </section>
 
-        <section>
-          <h2>3. Finalidades</h2>
-          <ul>
-            <li>criar e proteger a conta;</li>
-            <li>manter a sessão autenticada;</li>
-            <li>salvar e sincronizar os registros financeiros inseridos pelo usuário;</li>
-            <li>calcular saldos, relatórios, metas e faturas;</li>
-            <li>validar, restaurar e administrar o acesso aos recursos do plano Pro;</li>
-            <li>enviar lembretes autorizados no horário escolhido pelo usuário;</li>
-            <li>transcrever mensagens de voz e interpretar pedidos de organização financeira no coordenador opcional Pro;</li>
-            <li>prevenir acesso indevido e diagnosticar falhas técnicas sem expor dados sensíveis.</li>
-          </ul>
-        </section>
+            <section>
+              <h2 id="dados-que-o-aplicativo-nao-acessa">2. Dados que o aplicativo não acessa</h2>
+              <p>O Finance não se conecta a bancos, não movimenta dinheiro real e não acessa contatos, localização, câmera ou fotos. Não utiliza publicidade ou rastreamento entre aplicativos. O microfone é solicitado somente quando o usuário decide gravar uma mensagem para o coordenador Pro, em primeiro plano.</p>
+            </section>
 
-        <section>
-          <h2>4. Armazenamento e prestadores</h2>
-          <p>A autenticação e os dados sincronizados utilizam a infraestrutura do Supabase. No login com Google, a senha permanece com esse provedor e não é recebida pelo Finance. O dispositivo mantém uma cópia local dos registros e preferências necessárias ao funcionamento. Em Android e iOS, a sessão de autenticação é armazenada pelo SecureStore do Expo.</p>
-          <p>No modo sem cadastro, os registros financeiros permanecem somente no dispositivo e não são enviados para a nuvem. O Supabase cria apenas um identificador técnico anônimo para permitir o funcionamento da sessão local. Para sincronizar, recuperar ou acessar os registros em outro aparelho, é necessário vincular uma conta.</p>
-          <p>Assinaturas são processadas pela Google Play ou Apple App Store e validadas pelo RevenueCat. O Finance envia ao RevenueCat o identificador técnico da conta e recebe dados de produto, compra, validade e elegibilidade. O Finance não recebe o número do cartão ou outros dados completos do meio de pagamento.</p>
-          <p>Os sistemas operacionais e as lojas podem tratar dados técnicos conforme as políticas próprias deles. O Finance não vende dados pessoais.</p>
-          <h3>Coordenador Pro e OpenAI</h3>
-          <p>O chat é opcional e exclusivo de contas cadastradas com acesso Pro. Antes do primeiro envio, o aplicativo pede consentimento. Após a autorização, envia à OpenAI a mensagem ou áudio escolhido, mensagens recentes e um catálogo limitado de registros do perfil financeiro ativo: descrições, valores, datas, contas, cartões, categorias, metas, investimentos e vínculos necessários para interpretar o pedido. Não envie senhas, números de cartão ou documentos pelo chat.</p>
-          <p>O texto da conversa e as transcrições ficam no Supabase, vinculados à conta. O arquivo de áudio é processado sem ser armazenado no servidor Finance; o aparelho pode mantê-lo temporariamente no cache. A OpenAI processa os dados conforme seus <a href="https://openai.com/policies/">termos e políticas</a> e pode manter registros de segurança conforme sua política de dados de API. Esses serviços podem tratar dados fora do Brasil.</p>
-          <p>O consentimento é registrado por conta e pode ser revogado em Privacidade do chat. A revogação bloqueia novos envios, mas não apaga automaticamente o histórico já salvo. Pedidos claros podem adicionar, editar ou excluir registros automaticamente; a revisão posterior permite conferir, editar e desfazer quando os vínculos e alterações posteriores permitirem. Recibos das ações e cópias dos registros afetados ficam no snapshot financeiro do perfil para manter rastreabilidade e permitir desfazer.</p>
-        </section>
+            <section>
+              <h2 id="finalidades">3. Finalidades</h2>
+              <ul>
+                <li>criar e proteger a conta;</li>
+                <li>manter a sessão autenticada;</li>
+                <li>salvar e sincronizar os registros financeiros inseridos pelo usuário;</li>
+                <li>calcular saldos, relatórios, metas e faturas;</li>
+                <li>validar, restaurar e administrar o acesso aos recursos do plano Pro;</li>
+                <li>enviar lembretes autorizados no horário escolhido pelo usuário;</li>
+                <li>transcrever mensagens de voz e interpretar pedidos de organização financeira no coordenador opcional Pro;</li>
+                <li>prevenir acesso indevido e diagnosticar falhas técnicas sem expor dados sensíveis.</li>
+              </ul>
+            </section>
 
-        <section>
-          <h2>5. Arquivos de importação e exportação</h2>
-          <p>Os arquivos PDF, XLS e CSV são processados no aparelho. Ao exportar, o usuário escolhe o aplicativo ou local de destino e passa a ser responsável pela proteção da cópia. O Finance não envia esses arquivos ao servidor apenas para executar a importação ou exportação.</p>
-        </section>
+            <section>
+              <h2 id="armazenamento-e-prestadores">4. Armazenamento e prestadores</h2>
+              <p>A autenticação e os dados sincronizados utilizam a infraestrutura do Supabase. No login com Google, a senha permanece com esse provedor e não é recebida pelo Finance. O dispositivo mantém uma cópia local dos registros e preferências necessárias ao funcionamento. Em Android e iOS, a sessão de autenticação é armazenada pelo SecureStore do Expo.</p>
+              <p>No modo sem cadastro, os registros financeiros permanecem somente no dispositivo e não são enviados para a nuvem. O Supabase cria apenas um identificador técnico anônimo para permitir o funcionamento da sessão local. Para sincronizar, recuperar ou acessar os registros em outro aparelho, é necessário vincular uma conta.</p>
+              <p>Assinaturas são processadas pela Google Play ou Apple App Store e validadas pelo RevenueCat. O Finance envia ao RevenueCat o identificador técnico da conta e recebe dados de produto, compra, validade e elegibilidade. O Finance não recebe o número do cartão ou outros dados completos do meio de pagamento.</p>
+              <p>Os sistemas operacionais e as lojas podem tratar dados técnicos conforme as políticas próprias deles. O Finance não vende dados pessoais.</p>
+              <h3>Coordenador Pro e OpenAI</h3>
+              <p>O chat é opcional e exclusivo de contas cadastradas com acesso Pro. Antes do primeiro envio, o aplicativo pede consentimento. Após a autorização, envia à OpenAI a mensagem ou áudio escolhido, mensagens recentes e um catálogo limitado de registros do perfil financeiro ativo: descrições, valores, datas, contas, cartões, categorias, metas, investimentos e vínculos necessários para interpretar o pedido. Não envie senhas, números de cartão ou documentos pelo chat.</p>
+              <p>O texto da conversa e as transcrições ficam no Supabase, vinculados à conta. O arquivo de áudio é processado sem ser armazenado no servidor Finance; o aparelho pode mantê-lo temporariamente no cache. A OpenAI processa os dados conforme seus <a href="https://openai.com/policies/">termos e políticas</a> e pode manter registros de segurança conforme sua política de dados de API. Esses serviços podem tratar dados fora do Brasil.</p>
+              <p>O consentimento é registrado por conta e pode ser revogado em Privacidade do chat. A revogação bloqueia novos envios, mas não apaga automaticamente o histórico já salvo. Pedidos claros podem adicionar, editar ou excluir registros automaticamente; a revisão posterior permite conferir, editar e desfazer quando os vínculos e alterações posteriores permitirem. Recibos das ações e cópias dos registros afetados ficam no snapshot financeiro do perfil para manter rastreabilidade e permitir desfazer.</p>
+            </section>
 
-        <section>
-          <h2>6. Notificações</h2>
-          <p>Os lembretes de despesas, faturas e agendamentos respeitam as preferências e o horário de cada usuário. Além da programação local, o envio remoto pode utilizar Expo e Firebase Cloud Messaging (Google), com um token técnico do dispositivo, fuso horário, preferências e os dados mínimos necessários ao aviso. O conteúdo da notificação pode aparecer na tela bloqueada conforme as configurações do sistema. A permissão pode ser recusada ou revogada no dispositivo.</p>
-        </section>
+            <section>
+              <h2 id="arquivos-de-importacao-e-exportacao">5. Arquivos de importação e exportação</h2>
+              <p>Os arquivos PDF, XLS e CSV são processados no aparelho. Ao exportar, o usuário escolhe o aplicativo ou local de destino e passa a ser responsável pela proteção da cópia. O Finance não envia esses arquivos ao servidor apenas para executar a importação ou exportação.</p>
+            </section>
 
-        <section>
-          <h2>7. Segurança e sessão</h2>
-          <p>O acesso aos dados na nuvem é limitado ao identificador obtido da sessão autenticada. Tokens e senhas não são registrados em logs de produção. Nenhum método de armazenamento é absolutamente infalível, mas são aplicadas medidas técnicas adequadas ao funcionamento atual.</p>
-        </section>
+            <section>
+              <h2 id="notificacoes">6. Notificações</h2>
+              <p>Os lembretes de despesas, faturas e agendamentos respeitam as preferências e o horário de cada usuário. Além da programação local, o envio remoto pode utilizar Expo e Firebase Cloud Messaging (Google), com um token técnico do dispositivo, fuso horário, preferências e os dados mínimos necessários ao aviso. O conteúdo da notificação pode aparecer na tela bloqueada conforme as configurações do sistema. A permissão pode ser recusada ou revogada no dispositivo.</p>
+            </section>
 
-        <section>
-          <h2>8. Retenção e exclusão</h2>
-          <p>Os dados permanecem enquanto a conta estiver ativa. A opção Configurações &gt; Excluir conta remove permanentemente a conta de autenticação, o snapshot financeiro associado, as sessões e os dados privados locais daquele usuário.</p>
-          <p>A exclusão da conta também remove o histórico textual do coordenador e o registro de consentimento vinculados à conta. A perda do acesso Pro não apaga esses dados automaticamente. A revogação do consentimento ou da permissão de microfone não reverte o processamento já realizado por terceiros.</p>
-          <p>No modo sem cadastro, apagar os dados do aplicativo, desinstalá-lo ou perder o dispositivo pode apagar os registros locais sem possibilidade de recuperação. Vincular uma conta ativa a sincronização na nuvem para os registros mantidos no aparelho.</p>
-          <p>O cancelamento da assinatura não exclui a conta. Registros de compra podem ser conservados pelas lojas e pelo provedor de assinaturas quando necessário para obrigações legais, fiscais, prevenção a fraude, estornos e restauração de compras.</p>
-          <p>Quem não tiver acesso ao aplicativo pode iniciar a solicitação pela página pública de <a href="exclusao-de-conta.html">Exclusão de conta</a>, usando o mesmo e-mail cadastrado para confirmar a titularidade.</p>
-        </section>
+            <section>
+              <h2 id="seguranca-e-sessao">7. Segurança e sessão</h2>
+              <p>O acesso aos dados na nuvem é limitado ao identificador obtido da sessão autenticada. Tokens e senhas não são registrados em logs de produção. Nenhum método de armazenamento é absolutamente infalível, mas são aplicadas medidas técnicas adequadas ao funcionamento atual.</p>
+            </section>
 
-        <section>
-          <h2>9. Direitos do titular</h2>
-          <p>O usuário pode consultar, corrigir e excluir seus dados pelo aplicativo. Solicitações adicionais podem ser enviadas ao contato de privacidade informado abaixo.</p>
-        </section>
+            <section>
+              <h2 id="retencao-e-exclusao">8. Retenção e exclusão</h2>
+              <p>Os dados permanecem enquanto a conta estiver ativa. A opção Configurações &gt; Excluir conta remove permanentemente a conta de autenticação, o snapshot financeiro associado, as sessões e os dados privados locais daquele usuário.</p>
+              <p>A exclusão da conta também remove o histórico textual do coordenador e o registro de consentimento vinculados à conta. A perda do acesso Pro não apaga esses dados automaticamente. A revogação do consentimento ou da permissão de microfone não reverte o processamento já realizado por terceiros.</p>
+              <p>No modo sem cadastro, apagar os dados do aplicativo, desinstalá-lo ou perder o dispositivo pode apagar os registros locais sem possibilidade de recuperação. Vincular uma conta ativa a sincronização na nuvem para os registros mantidos no aparelho.</p>
+              <p>O cancelamento da assinatura não exclui a conta. Registros de compra podem ser conservados pelas lojas e pelo provedor de assinaturas quando necessário para obrigações legais, fiscais, prevenção a fraude, estornos e restauração de compras.</p>
+              <p>Quem não tiver acesso ao aplicativo pode iniciar a solicitação pela página pública de <a href="exclusao-de-conta.html">Exclusão de conta</a>, usando o mesmo e-mail cadastrado para confirmar a titularidade.</p>
+            </section>
 
-        <section>
-          <h2>10. Atualizações e contato</h2>
-          <p>Esta política poderá ser atualizada para refletir mudanças reais no aplicativo. Para dúvidas, solicitações ou assuntos de privacidade, entre em contato pelo e-mail <a href="mailto:financeappvca@gmail.com">financeappvca@gmail.com</a>. A versão pública desta política está disponível em <a href="https://patrickvca.github.io/FinanceApp-legal/privacidade.html">https://patrickvca.github.io/FinanceApp-legal/privacidade.html</a>.</p>
-        </section>
-      </article>
+            <section>
+              <h2 id="direitos-do-titular">9. Direitos do titular</h2>
+              <p>O usuário pode consultar, corrigir e excluir seus dados pelo aplicativo. Solicitações adicionais podem ser enviadas ao contato de privacidade informado abaixo.</p>
+            </section>
+
+            <section>
+              <h2 id="atualizacoes-e-contato">10. Atualizações e contato</h2>
+              <p>Esta política poderá ser atualizada para refletir mudanças reais no aplicativo. Para dúvidas, solicitações ou assuntos de privacidade, entre em contato pelo e-mail <a href="mailto:financeappvca@gmail.com">financeappvca@gmail.com</a>. A versão pública desta política está disponível em <a href="https://patrickvca.github.io/FinanceApp-legal/privacidade.html">https://patrickvca.github.io/FinanceApp-legal/privacidade.html</a>.</p>
+            </section>
+          </article>
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <span>Finance · Política de Privacidade</span>
-      <div class="footer-links"><a href="termos.html">Termos de Uso</a><a href="exclusao-de-conta.html">Excluir conta</a></div>
-      <span>Atualizado em 16 de outubro de 2026</span>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand" href="index.html"><img src="assets/app-icon.png" alt="" width="28" height="28" /><span>Finance</span></a>
+        <nav class="footer-links" aria-label="Documentos e contato">
+          <a href="privacidade.html">Privacidade</a>
+          <a href="termos.html">Termos de Uso</a>
+          <a href="exclusao-de-conta.html">Excluir conta</a>
+          <a href="mailto:financeappvca@gmail.com">Contato</a>
+        </nav>
+        <small>Finance · Organização financeira pessoal</small>
+      </div>
     </footer>
+
+    <script src="legal.js"></script>
   </body>
 </html>
